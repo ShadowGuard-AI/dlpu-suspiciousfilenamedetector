@@ -55,8 +55,13 @@ class SuspiciousFilenameDetector:
 
         for keyword in self.keywords:
             try:
-                pattern = r'\b' + re.escape(keyword) + r'\b'  # Use word boundaries and escape keyword
-                if re.search(pattern, filename, re.IGNORECASE): # Case-insensitive search
+                # Plain substring, no word boundaries. Filenames glue the
+                # keyword to the rest with underscores and digits, which are
+                # word characters, so a \b match missed password_list.txt
+                # and my_api_key_backup.txt entirely. For a flagging tool a
+                # few extra hits on names like passwords.txt are the right
+                # trade; a missed sensitive name is not.
+                if re.search(re.escape(keyword), filename, re.IGNORECASE):
                     self.sensitive_files.append(filepath) # Append full path to sensitive files
                     logging.warning(f"Potential sensitive filename found: {filepath} (Keyword: {keyword})")
                     break  # No need to check other keywords if one is found
@@ -103,10 +108,6 @@ def main():
         sys.exit(1)
 
     try:
-        # Input validation
-        if not isinstance(directory, str):
-            raise TypeError("Directory must be a string.")
-
         if args.keywords:
             if not all(isinstance(keyword, str) for keyword in args.keywords):
                 raise TypeError("Keywords must be strings.")
