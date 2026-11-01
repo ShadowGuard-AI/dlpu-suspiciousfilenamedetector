@@ -36,6 +36,10 @@ class SuspiciousFilenameDetector:
             raise ValueError(f"Invalid directory: {directory}") # Added error handling for invalid directory
 
         try:
+            # One level only: listdir never descends, so a sensitive
+            # name inside a subdirectory is out of view entirely. The
+            # scan covers the names in this folder, not the tree under
+            # it, whatever the word directory suggests.
             for filename in os.listdir(directory):
                 filepath = os.path.join(directory, filename)
                 if os.path.isfile(filepath):
@@ -51,6 +55,10 @@ class SuspiciousFilenameDetector:
         Args:
             filepath (str): The full path to the file to analyze.
         """
+        # Only the final component is judged. A keyword in a folder
+        # name above the file contributes nothing, and the path stored
+        # in the report is the full path even though the match was on
+        # the basename alone.
         filename = os.path.basename(filepath)  # Extract the filename from the path
 
         for keyword in self.keywords:
@@ -111,6 +119,10 @@ def main():
         if args.keywords:
             if not all(isinstance(keyword, str) for keyword in args.keywords):
                 raise TypeError("Keywords must be strings.")
+            # Custom keywords replace the default set outright, they
+            # do not extend it: passing one keyword of your own turns
+            # off all seven built in checks, including password and
+            # secret, for that run.
             analyzer = SuspiciousFilenameDetector(args.keywords) #custom keywords
         else:
             analyzer = SuspiciousFilenameDetector()
