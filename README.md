@@ -13,7 +13,7 @@ Title block: the name above is set in Bruno Ace SC in bone white on abyss indigo
 ![Major separator](sep-heavy.svg)
 
 # dlpu-SuspiciousFilenameDetector
-Analyzes filenames in a directory and flags files with names that resemble sensitive data (e.g., containing 'SSN', 'creditcard', 'confidential') using regular expressions and a configurable keyword list.  Outputs a report of potentially sensitive files. - Focused on Identifies and redacts or flags sensitive data (e.g., email addresses, phone numbers, credit card numbers, API keys, domain names) from text files, logs, or network traffic captures.  Employs regular expressions and contextual analysis to detect potentially leaked information. Supports customizable patterns and sensitivity levels.
+Analyzes filenames in a directory and flags files with names that resemble sensitive data (e.g., containing 'SSN', 'creditcard', 'confidential') using regular expressions and a configurable keyword list.  Outputs a report of potentially sensitive files. It does not read file contents, redact anything, or scan logs or network traffic: it judges only the final name component, by case-insensitive substring match against the built-in seven keywords or a custom list that replaces them.
 
 > Sounding note: contents are never read, only names. The program looks at the names of files in one directory and never opens a file.
 
@@ -34,7 +34,7 @@ Analyzes filenames in a directory and flags files with names that resemble sensi
 ## Parameters
 - `directory`: The directory to analyze.
 - `-h`: Show help message and exit
-- `-k`, `--keywords`: Custom keywords to search for.
+- `-k`, `--keywords`: Custom keywords to search for, one or more, replacing the built-in seven outright.
 - `-o`, `--output`: Output file for report (optional).
 
 > Sounding note: custom keywords replace the built in seven rather than adding to them. One custom word switches all seven built in checks off for that run.
