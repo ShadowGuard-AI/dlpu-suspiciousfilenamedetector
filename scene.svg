@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-label="The flooded nave in three bands: light shafts shifting and silt drifting and a fish school crossing in the far band, octopus arms curling round a pillar and anglerfish lures swaying and coral polyps opening and closing in the middle band, and the tower with its motionless bell, a trembling gauge needle and snagged pearl strands in the near band">
+<rect width="900" height="300" fill="#122038"/>
+<g fill="#bec86e" opacity="0.28"><polygon points="180,0 250,0 300,300 210,300"/><polygon points="470,0 540,0 590,300 500,300"/><polygon points="700,0 760,0 810,300 730,300"/>
+<animate attributeName="opacity" values="0.28;0.18;0.28" dur="16s" repeatCount="indefinite"/></g>
+<g fill="#f0eee1"><circle cx="120" cy="240" r="2"/><circle cx="340" cy="262" r="1.8"/><circle cx="560" cy="248" r="2"/><circle cx="780" cy="266" r="1.8"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 24 8; 0 16" dur="18s" repeatCount="indefinite"/></g>
+<g fill="#b2baa8"><polygon points="0,0 16,-4 22,0 16,4"/><polygon points="0,0 16,-4 22,0 16,4" transform="translate(60 10)"/><polygon points="0,0 16,-4 22,0 16,4" transform="translate(120 -6)"/>
+<animateTransform attributeName="transform" type="translate" values="-140 150; 940 142" dur="30s" repeatCount="indefinite"/></g>
+<g stroke="#8a6a6e" stroke-width="10" fill="none" stroke-linecap="round"><path d="M120 268 Q150 236 182 262">
+<animate attributeName="d" values="M120 268 Q150 236 182 262;M120 268 Q146 246 182 258;M120 268 Q150 236 182 262" dur="11s" repeatCount="indefinite"/></path></g>
+<g fill="#d4af37"><circle cx="640" cy="176" r="5"><animateTransform attributeName="transform" type="rotate" values="-8 640 150; 8 640 150; -8 640 150" dur="7s" repeatCount="indefinite"/></circle><circle cx="700" cy="190" r="4"><animateTransform attributeName="transform" type="rotate" values="7 700 166; -7 700 166; 7 700 166" dur="9s" repeatCount="indefinite"/></circle></g>
+<g fill="#de967e"><circle cx="52" cy="252" r="6"><animate attributeName="r" values="6;3.4;6" dur="6s" repeatCount="indefinite"/></circle><circle cx="70" cy="238" r="5"><animate attributeName="r" values="5;3;5" dur="8s" repeatCount="indefinite"/></circle></g>
+<path d="M44 286 L58 232 M58 252 L42 224 M60 250 L80 228" stroke="#c47660" stroke-width="7" fill="none"/>
+<g><rect x="392" y="66" width="116" height="168" fill="#6e6c64"/><polygon points="384,66 450,26 516,66" fill="#54524e"/><rect x="420" y="86" width="60" height="72" rx="28" fill="#080a0e"/><path d="M438 108 L462 108 L468 138 L474 144 L426 144 L432 138 Z" fill="#a88a34"/><circle cx="540" cy="150" r="24" fill="#f0eee1" stroke="#d4af37" stroke-width="4"/><line x1="540" y1="150" x2="554" y2="138" stroke="#1e1e1e" stroke-width="3"><animateTransform attributeName="transform" type="rotate" values="0 540 150; 1.6 540 150; 0 540 150" dur="5s" repeatCount="indefinite"/></line><g fill="#f0eee1"><circle cx="404" cy="196" r="4"/><circle cx="410" cy="208" r="4"/><circle cx="404" cy="220" r="4"/></g></g>
+</svg>

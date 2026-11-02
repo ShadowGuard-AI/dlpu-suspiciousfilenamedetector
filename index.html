@@ -1,166 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dlpu Suspiciousfilenamedetector: what it is, how it runs, where it stops</title>
-<meta name="description" content="Dlpu Suspiciousfilenamedetector is one of my projects. The README in the repo is short, so this page sticks to what the files themselves show.">
-<style>
-:root {
-  --bg: #e8dec4; --panel: #f4ecd6; --ink: #183636;
-  --mut: #ffffff;
-  --acc: #147a72; --acc2: #c65434;
-  --line: #f4ecd6;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink);
-  font-family: Charter, Georgia, serif; line-height: 1.55; }
-code, pre, .mono { font-family: 'DejaVu Sans Mono', monospace; }
-a { color: var(--acc2); }
-.hero { padding: 3rem 6vw 1rem; }
-.hero img.banner { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; }
-.logo { width: 92px; height: 92px; border-radius: 18px;
-  border: 1px solid var(--line); }
-h1 { font-size: 2.4rem; margin: 0.4em 0 0.1em; }
-h2 { border-bottom: 2px solid var(--acc); padding-bottom: 0.2em;
-  margin-top: 2em; }
-.lede { font-size: 1.15rem; max-width: 62ch; }
-main { padding: 0 6vw 3rem; max-width: 1180px; margin: 0 auto; }
-.grid { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-.card { background: var(--panel); border: 1px solid var(--line);
-  border-radius: 12px; padding: 1rem 1.2rem; }
-.card.pop { animation: rise 0.7s ease both; }
-@keyframes rise { from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: none; } }
-pre.code { background: #101014; color: #e8e6df; padding: 1rem 1.2rem;
-  border-radius: 12px; overflow-x: auto; font-size: 0.86rem;
-  border-left: 5px solid var(--acc); }
-table { border-collapse: collapse; width: 100%; }
-td, th { border-bottom: 1px solid var(--line); padding: 0.45rem 0.6rem;
-  text-align: left; }
-.shots { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.shots img { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; background: #f4f1e8; }
-footer { padding: 2rem 6vw; border-top: 1px solid var(--line);
-  color: var(--mut); }
-.rail { display: flex; gap: 1.2rem; align-items: flex-start; }
-.rail nav { position: sticky; top: 1rem; min-width: 180px; }
-@media (max-width: 760px) { .rail { flex-direction: column; }
-  .rail nav { position: static; } }
-@media (prefers-reduced-motion: reduce) {
-  .card.pop { animation: none; } * { scroll-behavior: auto; } }
-</style>
-</head>
-<body class="layout-note">
-<!-- This page exists for dlpu-suspiciousfilenamedetector alone: the layout (notebook),
-     the colors, and the type were picked for this project, not
-     shared with the other project pages. The code block below is
-     copied from the file it names, line for line. If it looks
-     plain, that is because the project is plain, and I would
-     rather the page match the project than dress it up. The one
-     thing I will not do here is oversell: what this project does
-     not do is stated on the page, not hidden from it. -->
-<header class="hero">
-  <img class="logo" src="assets/logo.png" alt="Dlpu Suspiciousfilenamedetector logo">
-  <img class="banner" src="assets/banner.png" alt="">
-  <h1>Dlpu Suspiciousfilenamedetector</h1>
-  <p class="mono"><a href="https://github.com/ShadowGuard-AI/dlpu-suspiciousfilenamedetector">github.com/ShadowGuard-AI/dlpu-suspiciousfilenamedetector</a></p>
-</header>
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>dlpu-suspiciousfilenamedetector: Sunken Cathedral of the Drowned Town</title>
+<style>@font-face{font-family:Disp;src:url("fonts/BrunoAceSC.ttf")}@font-face{font-family:Text;src:url("fonts/Archivo.ttf")}
+body{background:#122038;font-family:Text,sans-serif;color:#17181a;margin:0}main{max-width:920px;margin:0 auto;padding:28px}
+h1,h2,h3{font-family:Disp,serif;color:#122038;border-bottom:2px solid #d4af37;padding-bottom:6px}
+h1{color:#f0eee1;border-bottom:2px solid #d4af37}section{background:#e9e6d8;padding:18px 22px;margin:16px 0;border-left:4px solid #d4af37}
+img{max-width:100%}button{background:#122038;color:#f0eee1;border:1px solid #d4af37;padding:12px 18px;margin:4px;font-family:Disp,serif}
+a{color:#122038}pre{white-space:pre-wrap;font-family:Text,sans-serif;background:#f0eee1;padding:16px}</style></head><body><main>
+<img src="intro-banner.png" alt="Introduction banner: the flooded nave before any name is read">
+<h1>dlpu-suspiciousfilenamedetector: Sunken Cathedral of the Drowned Town</h1>
+<img src="logo.png" alt="Logo"><img src="banner.png" alt="Wordmark banner">
+<img src="scene.svg" alt="Animated scene in three bands">
+<div><button type="button">Check These Names</button><button type="button">Save the List</button><button type="button">Read the Soundings</button></div>
+<h3 style="color:#f0eee1">Names, Not Contents</h3><h3 style="color:#f0eee1">One Folder Deep</h3><h3 style="color:#f0eee1">Your Words Replace Ours</h3><h3 style="color:#f0eee1">Paths, Reported Whole</h3>
+<section><h2>Plate one: names, not contents</h2><p>Given a directory, the program looks at the names of the files sitting directly in that directory. It flags a name when the name itself contains one of a set of keywords, matched without regard to letter case. It never opens the files. It never reads a single byte of their contents.</p></section>
+<section><h2>Plate two: a labelled correction</h2><p>Correction. The README closing sales paragraph, in its opening account, claims the tool identifies and redacts or flags sensitive material such as addresses, numbers, and keys inside text files, logs, or traffic captures, with contextual analysis and sensitivity levels. None of that describes this program. This site replaces it with the plate one account: filename checking, one directory level, keyword matching, a list of flagged paths. The correction is shown as a correction, so a reader who met the README first can see exactly where the two accounts part.</p></section>
+<section><h2>Plate three: what a run needs</h2><p>Python and its standard library only. The requirements file states that in one line and names no package.</p></section>
+<section><h2>Plate four: install, as it stands</h2><p>The install line is printed as it stands in the preserved record below, because for this repo it stands correct. The clone line names ShadowGuard-AI, hyphenated, followed by the repo name. No correction is attached to it. Note: this line was put right by the merged README accuracy pass at the head of the current history, so its correctness is recent and deliberate, not original.</p></section>
+<section><h2>Plate five: the working form in placeholders</h2><p>The interpreter call, then main.py, then a placeholder for the directory to inspect. Optional keyword and output controls may follow. No real directory path from any real machine is printed here, and no flagged path from any real run is printed here. Form: python3 main.py [directory to inspect]</p></section>
+<section><h2>Plate six: controls in parser order</h2><p>Directory first, positional, required. Help next, in its short h form. Keywords follow, short k or long form, taking one or more values after the flag. Output closes the list, short o or long form, taking a path for the report file, and remaining optional.</p></section>
+<section><h2>Plate seven: how matching works</h2><p>Matching is a plain substring search, letter case ignored, with each keyword treated as literal text rather than as a pattern, since the code escapes it before searching. There are no word boundaries. A keyword glued to other characters by underscores or digits still counts, which is deliberate for names of files, where such gluing is the normal style. Only the final component of a path is judged: the file own name. A keyword appearing in a folder name above the file contributes nothing. When a file is flagged, the full path is what gets stored and reported.</p></section>
+<section><h2>Plate eight: the keyword sets</h2><p>Seven words are built in: SSN, creditcard, confidential, secret, password, api_key, apikey. Three of them are the examples the README itself prints: one for a national identifier, one written as a joined payment card word, and one marking material as confidential. The remaining four cover secrecy, passwords, and an application key written two ways, once with an underscore and once joined.</p><p>Supplying custom keywords replaces the built in set outright. It does not extend it. One custom word switches all seven built in checks off for that run.</p></section>
+<section><h2>Plate nine: reach and depth</h2><p>The scan covers one level only. The directory listing is never descended into, so a flagged name sitting inside a subfolder is out of view entirely. Directories themselves are not judged, only entries that are files. This is a check of the names in one folder, not an audit of a tree.</p></section>
+<section><h2>Plate ten: reporting and endings</h2><p>Without an output control, a run that finds flagged names prints a heading line and then each full path, one per line. A run that finds none prints a plain statement that no potentially sensitive files were found. With an output control, each flagged path is written to that file, one per line, and a saved confirmation prints. A directory argument that does not exist prints an error and ends at exit 1. A path that exists but is not a directory raises an invalid directory error inside the run, which is caught, printed as an error, and also ends at exit 1. A failure to write the report file prints an error and ends at exit 1.</p></section>
+<section><h2>Licence plate</h2><p>The README licence sentence is printed as it stands: This project is released under the MIT License. See the LICENSE file for details. Beside it, the separate file fact. The LICENSE file carries the MIT License, and its holder line gives a pen name together with a single initial for the remaining name. The initial is not expanded here.</p></section>
+<section><h2>The interface kit</h2><p>Buttons are cast as small sections of the tower itself: deep glass set over brass, in abyss indigo, shaped with the tower stepped roof profile along their top edge, and bordered by a hairline drawn from pressure gauge ticks. At rest the glass is dark. Hover warms the brass beneath it and the tick border takes anglerfish gold. Press deepens the indigo by one shade and holds it until release. No bubbles are emitted. Focus appears as a bone white double rule around the stepped outline. Links carry a short strand of pearls at their head: bone white at rest, touched with gold when the pointer arrives. Cards are nave panels: silt grey grounds, indigo heading band in Bruno Ace SC, Archivo text, and a tiny tower profile in the corner of any panel recording a finished scan, and on no other panel. Dividers inside the site are miniature scene strips drawn from the pressure gauge ticks, one strip per section break, fine at web weight.</p></section>
+<section><h2>The preserved README record</h2><pre>![Banner](banner.png)
 
-<main>
-  <section class="rail">
-    <nav aria-label="on this page">
-      <p class="mono"><a href="#run">Run it</a><br>
-      <a href="#files">The files</a><br>
-      <a href="#sheets">The sheets</a><br>
-      <a href="https://github.com/ShadowGuard-AI/dlpu-suspiciousfilenamedetector">The repo</a></p>
-    </nav>
-    <div>
-      <p class="lede">Dlpu Suspiciousfilenamedetector is one of my projects. The README in the repo is short, so this page sticks to what the files themselves show.</p>
-      <div class="grid">
-        <div class="card pop"><h3>What it is</h3>
-          <p>Dlpu Suspiciousfilenamedetector: 5 files, 181 counted
-          lines across Python 162, Markdown 18, Text 1. One job, done in the
-          open, in files you can read.</p></div>
-        <div class="card pop"><h3>The biggest piece</h3>
-          <p><code>main.py</code> carries the most
-          lines. If the project grows, that file is where the growth
-          lands first, for better or worse.</p></div>
-        <div class="card pop"><h3>The honest gap</h3>
-          <p>No test files yet. That is the honest gap, and the roadmap in the visuals folder says what the first one should cover.</p></div>
-      </div>
-      <section id="run">
-        <h2>Run it</h2>
-        <p>The repo README has the exact commands for this one. The
-        shape is the shape for most of my projects: clone it, read the
-        top file first so you know what will happen, then run it on
-        something you do not mind breaking.</p>
-        <p class="mono">$ git clone https://github.com/ShadowGuard-AI/dlpu-suspiciousfilenamedetector.git<br>$ cd dlpu-suspiciousfilenamedetector</p>
-      </section>
-      
-  <section aria-label="real code">
-    <h2>The code, as it sits in the repo</h2>
-    <p>From <code>main.py</code>, line 8 on. I did
-    not tidy it for the page. What you see is what the file has.</p>
-    <pre class="code"><code>logging.basicConfig(level=logging.INFO, format=&#x27;%(asctime)s - %(levelname)s - %(message)s&#x27;)
+# dlpu-SuspiciousFilenameDetector
+Analyzes filenames in a directory and flags files with names that resemble sensitive data (e.g., containing 'SSN', 'creditcard', 'confidential') using regular expressions and a configurable keyword list.  Outputs a report of potentially sensitive files. - Focused on Identifies and redacts or flags sensitive data (e.g., email addresses, phone numbers, credit card numbers, API keys, domain names) from text files, logs, or network traffic captures.  Employs regular expressions and contextual analysis to detect potentially leaked information. Supports customizable patterns and sensitivity levels.
 
-class SuspiciousFilenameDetector:
-    &quot;&quot;&quot;
-    Analyzes filenames in a directory and flags files with names that resemble sensitive data.
-    &quot;&quot;&quot;
+## Install
+`git clone https://github.com/ShadowGuard-AI/dlpu-suspiciousfilenamedetector`
 
-    def __init__(self, keywords=None):
-        &quot;&quot;&quot;
-        Initializes the SuspiciousFilenameDetector with a list of keywords.
+## Usage
+`python3 main.py directory [options]`
 
-        Args:
-            keywords (list, optional): A list of keywords to search for in filenames. Defaults to None.
-        &quot;&quot;&quot;
-        if keywords is None:
-            self.keywords = [&#x27;SSN&#x27;, &#x27;creditcard&#x27;, &#x27;confidential&#x27;, &#x27;secret&#x27;, &#x27;password&#x27;, &#x27;api_key&#x27;, &#x27;apikey&#x27;] #added more keywords
-        else:
-            self.keywords = keywords
-        self.sensitive_files = []
+## Parameters
+- `directory`: The directory to analyze.
+- `-h`: Show help message and exit
+- `-k`, `--keywords`: Custom keywords to search for.
+- `-o`, `--output`: Output file for report (optional).
 
-    def analyze_directory(self, directory):
-        &quot;&quot;&quot;</code></pre>
-  </section>
-      <section id="files">
-        <h2>The files that matter</h2>
-        <table><tr><th>File</th><th>Lines</th></tr>
-        <tr><td><code>main.py</code></td><td>162</td></tr>
-        <tr><td><code>README.md</code></td><td>18</td></tr>
-        <tr><td><code>requirements.txt</code></td><td>1</td></tr>
-        <tr><td><code>banner.png</code></td><td>0</td></tr>
-        <tr><td><code>logo.png</code></td><td>0</td></tr>
-        </table>
-        <p>Names doing the work: <span class="mono">SuspiciousFilenameDetector, setup_argparse, main, __init__, analyze_directory, analyze_filename, generate_report</span>.</p>
-      </section>
-      <section id="sheets">
-        <h2>Drawn by hand</h2>
-        <p>I sketch my projects on notebook paper so I have to
-        understand them well enough to draw them. The full set,
-        with the counts and how they were counted, is the
-        <a href="https://github.com/ShadowGuard-AI/dlpu-suspiciousfilenamedetector/tree/main/dlpu-suspiciousfilenamedetector-Visuals">dlpu-suspiciousfilenamedetector-Visuals</a>
-        folder in the repo. Nothing is drawn over the binder holes.
-        That is a rule, not a style.</p>
-        <div class="shots">
-          <img src="assets/architecture.png" alt="Hand drawn architecture sheet for Dlpu Suspiciousfilenamedetector">
-          <img src="assets/flowchart.png" alt="Hand drawn flowchart sheet for Dlpu Suspiciousfilenamedetector">
-          <img src="assets/product-map.png" alt="Hand drawn product map sheet for Dlpu Suspiciousfilenamedetector">
-        </div>
-      </section>
-    </div>
-  </section>
-</main>
-<footer>
-  <p>Dlpu Suspiciousfilenamedetector is one of my projects. This page was written
-  from the repo itself on 2026-10-30: the counts are the
-  repo's counts, the code is the repo's code, and the gaps are the
-  repo's gaps.</p>
-</footer>
-</body>
-</html>
+## License
+This project is released under the MIT License. See the [LICENSE](LICENSE) file for details.</pre></section>
+</main></body></html>
